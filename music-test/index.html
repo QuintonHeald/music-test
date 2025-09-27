@@ -3,43 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Tone.js Project</title>
+    <title>Music Test</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h2>Simple Sound Button!</h2>
     <button id="startButton">Click to Start Playing!</button>
 
-    <p id="status">Click the start button to enable audio</p>
-    <p id="scale"></p>
+    <div class="controls">
+      <div class="control-group">
+        <label for="scaleSelector" class="hidden">Choose Scale:</label>
+        <select id="scaleSelector" class="hidden">
+          <option value="C" selected>C Scale</option>
+          <option value="A">A Scale</option>
+          <option value="E">E Scale</option>
+          <option value="D">D Scale</option>
+          <option value="F">F Scale</option>
+          <option value="G">G Scale</option>
+        </select>
+      </div>
 
-    <div class="scale-controls">
-      <label for="scaleSelector" class="hidden">Choose Scale:</label>
-      <select id="scaleSelector" class="hidden">
-        <option value="C" selected>C Scale</option>
-        <option value="A">A Scale</option>
-        <option value="E">E Scale</option>
-        <option value="D">D Scale</option>
-        <option value="F">F Scale</option>
-        <option value="G">G Scale</option>
-      </select>
+      <div class="control-group">
+        <div>
+          <input type="checkbox" id="highOctave" name="highOctave" checked />
+          <label for="scales">High Octave</label>
+        </div>
+        <div>
+          <input type="checkbox" id="middleOctave" name="middleOctave" checked />
+          <label for="scales">Middle Octave</label>
+        </div>
+        <div>
+          <input type="checkbox" id="lowOctave" name="lowOctave" checked />
+          <label for="scales">Low Octave</label>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="instrumentSelector" class="hidden"
+          >Choose Instrument:</label
+        >
+        <select id="instrumentSelector" class="hidden">
+          <option value="Synth" selected>Synth</option>
+          <option value="AMSynth">AM Synth</option>
+          <option value="DuoSynth">Duo Synth</option>
+          <option value="MembraneSynth">Membrane Synth</option>
+          <option value="MetalSynth">Metal Synth</option>
+          <option value="MonoSynth">Mono Synth</option>
+          <option value="PluckSynth">Pluck Synth</option>
+        </select>
+      </div>
     </div>
 
     <!-- Note Buttons -->
-    <div class="note-buttons">
-      <button id="note4" class="hidden">C4</button>
-      <button id="note5" class="hidden">C5</button>
-      <button id="note6" class="hidden">C6</button>
-    </div>
-
-    <div class="note-buttons">
-      <button id="note4" class="hidden">C4</button>
-      <button id="note5" class="hidden">C5</button>
-      <button id="note6" class="hidden">C6</button>
-      <button id="metalNote4" class="hidden">Metal C4</button>
-      <button id="metalNote5" class="hidden">Metal C5</button>
-      <button id="metalNote6" class="hidden">Metal C6</button>
-    </div>
+    <div class="note-buttons" id="noteButtons"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
     <script src="script.js"></script>
