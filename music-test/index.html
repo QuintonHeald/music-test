@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tone.js Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Simple Sound Button!</h2>
+    <button id="startButton">Click to Start Playing!</button>
+
+    <p id="status">Click the start button to enable audio</p>
+    <p id="scale"></p>
+
+    <div class="scale-controls">
+      <label for="scaleSelector" class="hidden">Choose Scale:</label>
+      <select id="scaleSelector" class="hidden">
+        <option value="C" selected>C Scale</option>
+        <option value="A">A Scale</option>
+        <option value="E">E Scale</option>
+        <option value="D">D Scale</option>
+        <option value="G">G Scale</option>
+      </select>
+    </div>
+
+    <!-- Note Buttons -->
+    <div class="note-buttons">
+      <button id="note4" class="hidden">C4</button>
+      <button id="note5" class="hidden">C5</button>
+      <button id="note6" class="hidden">C6</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
